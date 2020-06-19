@@ -1,10 +1,12 @@
 server:
-  port: 8082
+                   port: 8082
 
-dubbo:
-  application:
-    name: dubbo-learn-invoker
-  registry:
-    address: zookeeper://106.12.15.56:2181
-  monitor:
-    protocol: registry
+                   dubbo:
+                     application:
+                       name: dubbo-learn-invoker
+                     registry:
+                       address: zookeeper://106.12.15.56:2181
+                     monitor:
+                       protocol: registry
+                     consumer:
+                       loadbalance: first

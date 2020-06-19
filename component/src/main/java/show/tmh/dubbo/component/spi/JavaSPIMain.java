@@ -1,10 +1,12 @@
 package show.tmh.dubbo.component.spi;
 
-/**
- * TODO:DOCUMENT ME!
- *
- * @author yuhao
- * @date 2020/6/19 1:46 下午
- */
-public class Main {
+import java.util.ServiceLoader;
+
+public class JavaSPIMain {
+
+    public static void main(String[] args) {
+        ServiceLoader<Robot> serviceLoader = ServiceLoader.load(Robot.class);
+        System.out.println("Java SPI");
+        serviceLoader.forEach(Robot::sayHello);
+    }
 }
